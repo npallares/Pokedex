@@ -1,4 +1,10 @@
 const $card = document.getElementById("card")
+const $titulo = document.getElementById("titulo")
+const $descripcion = document.getElementById("descripcion")
+const $idPokemon = document.getElementById("idPokemon")
+const $attack = document.getElementById("attack")
+const $defense = document.getElementById("defense")
+const $speed = document.getElementById("speed")
 
 
 const consultarPokemon = (id) =>{
@@ -25,16 +31,19 @@ function mostrarPokemon(pokemon){
     let link_img = pokemon.sprites.other.dream_world.front_default;
     $card.children[0].children[0].setAttribute("src",link_img)    
 
-    /********** LLAMADO A TITULO / NOMBRE  *********/
+    /********** LLAMADO A NOMBRE / ID  *********/
+    
     let nombre=pokemon.name.toUpperCase();
-    $card.children[1].children[0].innerHTML=nombre
+    $titulo.innerHTML=nombre
 
+    console.log(pokemon.order)
+    $idPokemon.innerHTML=`# ${pokemon.order}`
 
     /********** LLAMADO A DESCRIPCION *********/
        
     let link="";
     link=pokemon.species.url
-    console.log(link)
+    /* console.log(link) */
 
     fetch(link)
     .then(function (response){
@@ -47,12 +56,24 @@ function mostrarPokemon(pokemon){
                    
                     if(descripcion.flavor_text_entries[index].language.name == "es"){
                         /* console.log(descripcion.flavor_text_entries[index]); */
-                        let $description = descripcion.flavor_text_entries[index].flavor_text;
-                        $card.children[1].children[1].innerHTML=$description
+                        let description = descripcion.flavor_text_entries[index].flavor_text;
+                        $descripcion.innerHTML=description
                         index=200;
                     } 
                     
                 }
+                // Seteo color de fondo
+                console.log(descripcion.color.name)
+                let bgColor=descripcion.color.name
+                $card.classList.add(`bgcolor-${bgColor}`)
+
+                // Seteo ataque, defensa y velocidad
+                console.log(pokemon.stats[1].base_stat)
+                console.log(pokemon.stats)
+                $attack.innerHTML=pokemon.stats[1].base_stat
+                $defense.innerHTML=pokemon.stats[2].base_stat
+                $speed.innerHTML=pokemon.stats[3].base_stat
+
             })
         }) 
     

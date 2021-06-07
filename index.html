@@ -12,14 +12,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="centro" id="card">
+    <div class="card" id="card">
         <div class="cuadro_imagen">
            <img src="" class="imagen" alt="">
         </div>
+
         <div class="cuadro_descripcion">
-            <h1 class="titulo">Titulo</h1>
-            <p class="descripcion">descripcion</p>
+            <span class="row_sb">
+            <h1 class="titulo" id="titulo">Titulo</h1>
+            <h2 class="idPokemon" id="idPokemon">Id</h2>
+            </span>
+            <p class="descripcion" id="descripcion">descripcion</p>
         </div>
+
+        <section id="section_caracteristicas">
+            <div class="cuadro_caracteristicas padding-T-un-rem " >
+                <div class="caracteristicas_d"><img src="assets/img/att.png" alt="" class="iconCar"></div>    
+                
+                <div class="caracteristicas_img"><img src="assets/img/def.png" alt="" class="iconCar"></div>
+
+                <div class="caracteristicas_img"><img src="assets/img/speed.png" alt="" class="iconCar"></div>    
+
+            </div>
+
+            <div class="cuadro_caracteristicas">
+                <div class="caracteristicas_b">Ataque</div>    
+                
+                <div class="caracteristicas_b">Defensa</div>
+
+                <div class="caracteristicas_b">Velocidad</div>
+            </div>
+
+            <div class="cuadro_caracteristicas padding-B-un-rem" id="caracteristicas">
+                
+                <div class="caracteristicas_d" id="attack">111</div> 
+                
+                <div class="caracteristicas_d" id="defense">222</div>
+
+                <div class="caracteristicas_d" id="speed">333</div>
+            </div>
+        </section>
     </div>
     
     <script src="index.js"></script>
