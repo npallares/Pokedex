@@ -6,6 +6,7 @@ const $idPokemon = document.getElementById("idPokemon")
 const $attack = document.getElementById("attack")
 const $defense = document.getElementById("defense")
 const $speed = document.getElementById("speed")
+const $cuadroImagen = document.getElementById("cuadro_imagen")
 
 
 console.log($tituloIndex)
