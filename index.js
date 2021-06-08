@@ -20,20 +20,25 @@ const consultarPokemon = (id) =>{
 }
 
 
-consultarPokemon(25)
+consultarPokemon(35)
 
 function mostrarPokemon(pokemon){
+
     let nombre=pokemon.name.toUpperCase();
     $tituloIndex.innerHTML=nombre;
     $imgIndex.setAttribute("src",pokemon.sprites.other.dream_world.front_default)
     
     let $clone = document.importNode($template,true)
-    $template.querySelector("img").setAttribute("src",pokemon.sprites.other.dream_world.front_default)
-    $template.querySelector("h1").setAttribute("id","hola");
-    $fragment.appendChild($clone)
+    /* $template.querySelector("img").setAttribute("src",pokemon.sprites.other.dream_world.front_default) */
+   /*  $template.querySelector("h1").setAttribute("id","hola"); */
+   
+     $fragment.appendChild($clone)
+
     let imgFrag=$fragment.children[0].querySelector("img")
-    imgFrag.setAttribute("src","hola")
-    console.log(imgFrag)
+    let h1Frag=$fragment.children[0].querySelector("h1")
+
+    h1Frag.innerHTML=nombre
+    imgFrag.setAttribute("src",pokemon.sprites.other.dream_world.front_default)
     $main.appendChild($fragment)    
     
 }
