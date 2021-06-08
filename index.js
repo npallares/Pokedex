@@ -5,6 +5,7 @@ const $idPokemon = document.getElementById("idPokemon")
 const $attack = document.getElementById("attack")
 const $defense = document.getElementById("defense")
 const $speed = document.getElementById("speed")
+const $cuadroImagen = document.getElementById("cuadro_imagen")
 
 
 const consultarPokemon = (id) =>{
@@ -65,16 +66,17 @@ function mostrarPokemon(pokemon){
                 // Seteo color de fondo
                 console.log(descripcion.color.name)
                 let bgColor=descripcion.color.name
-                $card.classList.add(`bgcolor-${bgColor}`)
+                $cuadroImagen.classList.add(`bgcolor-${bgColor}`)
 
                 // Seteo ataque, defensa y velocidad
-                console.log(pokemon.stats[1].base_stat)
-                console.log(pokemon.stats)
+                /* console.log(pokemon.stats[1].base_stat) */
+                /* console.log(pokemon.stats) */
                 $attack.innerHTML=pokemon.stats[1].base_stat
                 $defense.innerHTML=pokemon.stats[2].base_stat
                 $speed.innerHTML=pokemon.stats[3].base_stat
-
             })
-        }) 
+    }) 
+
+    console.log(pokemon)
     
 }

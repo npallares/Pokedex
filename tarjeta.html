@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEDEX</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="head"></div>
+    </header>
+    <div class="card" id="card">
+        <div class="cuadro_imagen" id="cuadro_imagen">
+           <img src="" class="imagen" alt="">
+           <span class="circle"></span>
+        </div>
+
+        <div class="cuadro_descripcion">
+            <span class="row_sb">
+            <h1 class="titulo" id="titulo">Titulo</h1>
+            <h2 class="idPokemon" id="idPokemon">Id</h2>
+            </span>
+            <p class="descripcion" id="descripcion">descripcion</p>
+        </div>
+
+        <section id="section_caracteristicas">
+            <div class="cuadro_caracteristicas padding-T-un-rem " >
+                <div class="caracteristicas_d"><img src="assets/img/att.png" alt="" class="iconCar"></div>    
+                
+                <div class="caracteristicas_img"><img src="assets/img/def.png" alt="" class="iconCar"></div>
+
+                <div class="caracteristicas_img"><img src="assets/img/speed.png" alt="" class="iconCar"></div>    
+
+            </div>
+
+            <div class="cuadro_caracteristicas">
+                <div class="caracteristicas_b">Ataque</div>    
+                
+                <div class="caracteristicas_b">Defensa</div>
+
+                <div class="caracteristicas_b">Velocidad</div>
+            </div>
+
+            <div class="cuadro_caracteristicas padding-B-un-rem" id="caracteristicas">
+                
+                <div class="caracteristicas_d" id="attack">111</div> 
+                
+                <div class="caracteristicas_d" id="defense">222</div>
+
+                <div class="caracteristicas_d" id="speed">333</div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="foot"></div>
+        </footer>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>

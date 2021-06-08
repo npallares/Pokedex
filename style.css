@@ -18,6 +18,20 @@ body{
     height: 100vh;
 }
 
+header{
+    width: 25rem;
+    height: 4rem;
+    background-color: rgba(49,49,49);
+    border-radius: 2rem 2rem 0 0;
+}
+
+footer{
+    width: 25rem;
+    height: 2rem;
+    background-color: rgba(40,40,40);
+    border-radius: 0 0 2rem 2rem ;
+}
+
 h1{
     padding:0;
     margin:0;
@@ -39,7 +53,7 @@ p{
     flex-direction: column;
     height: auto;
     width: 25rem;
-    background-color: #67b354;
+    /* border:1px solid red; */
 }
 
 .row_sb{
@@ -99,14 +113,24 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 20rem;
     /* border:1px solid green; */
 }
 
 .imagen{
-    height: 17rem;
-    width: 17rem;
+    z-index: 99;
+    height: 15rem;
+    width: 15rem;
     padding:2rem;
     /* border: solid 1px red; */
+}
+
+.circle{
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 7.5rem;
 }
 
 
@@ -194,4 +218,15 @@ p{
 
 .iconCar{
     width: 2rem;
+}
+
+/******* MODULO INDEX **********/
+
+.modulo{
+    display: flex;
+    height: 6rem;
+    margin: .25rem 0;
+    background-color: rgb(228, 228, 228);
+    /* border: 1px solid green; */
+    border-radius: 1rem;
 }
