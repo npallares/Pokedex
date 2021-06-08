@@ -9,7 +9,6 @@ const $speed = document.getElementById("speed")
 const $cuadroImagen = document.getElementById("cuadro_imagen")
 
 
-console.log($tituloIndex)
 
 const consultarPokemon = (id) =>{
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -41,7 +40,7 @@ function mostrarPokemon(pokemon){
     $titulo.innerHTML=nombre;
     /* $tituloIndex.innerHTML=nombre; */
 
-    console.log(pokemon.order)
+    /* console.log(pokemon.order) */
     $idPokemon.innerHTML=`# ${pokemon.order}`
 
     /********** LLAMADO A DESCRIPCION *********/
@@ -67,8 +66,8 @@ function mostrarPokemon(pokemon){
                     } 
                     
                 }
+                
                 // Seteo color de fondo
-                console.log(descripcion.color.name)
                 let bgColor=descripcion.color.name
                 $cuadroImagen.classList.add(`bgcolor-${bgColor}`)
 
@@ -81,6 +80,6 @@ function mostrarPokemon(pokemon){
             })
     }) 
 
-    console.log(pokemon)
+    /* console.log(pokemon) */
     
 }
