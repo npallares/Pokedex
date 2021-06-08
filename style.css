@@ -18,6 +18,16 @@ body{
     height: 100vh;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+    height: 40rem;
+    overflow-y: scroll;
+    background-color: #f1f1f1;
+}
+
 header{
     width: 25rem;
     height: 4rem;
@@ -25,12 +35,26 @@ header{
     border-radius: 2rem 2rem 0 0;
 }
 
+/* header{
+    width: 25rem;
+    height: 4rem;
+    background-color: rgba(49,49,49);
+    border-radius: 2rem 2rem 0 0;
+}
+ */
+
 footer{
     width: 25rem;
     height: 2rem;
     background-color: rgba(40,40,40);
     border-radius: 0 0 2rem 2rem ;
 }
+/* footer{
+    width: 25rem;
+    height: 2rem;
+    background-color: rgba(40,40,40);
+    border-radius: 0 0 2rem 2rem ;
+} */
 
 h1{
     padding:0;
@@ -56,10 +80,11 @@ p{
     /* border:1px solid red; */
 }
 .card_index{
+    margin-top: 0.6rem;
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 25rem;
+    width: 22rem;
     /* border:1px solid red; */
 }
 
@@ -159,7 +184,7 @@ p{
 
 .titulo{
     padding-top: .5rem;
-    color: white;
+    color: rgb(253, 253, 253);
     font-family: 'Titillium Web', sans-serif;
     font-weight: 600;
     font-size: 2rem;
@@ -234,7 +259,7 @@ p{
     justify-content: space-between;
     height: 6rem;
     margin: .25rem 0;
-    background-color: rgb(228, 228, 228);
+    /* background-color: rgb(228, 228, 228); */
     /* border: 1px solid green; */
     border-radius: 1rem;
 }
