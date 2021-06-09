@@ -266,6 +266,7 @@ p{
     /* background-color: rgb(228, 228, 228); */
     /* border: 1px solid green; */
     border-radius: 1rem;
+    transition: all .5s;
 }
 
 .contenedor_index{
@@ -307,6 +308,7 @@ p{
     height: 10rem;
     width: 9rem;
     overflow: hidden;
+    transition: all .5s;
 }
 
 .box img{
@@ -314,11 +316,65 @@ p{
     height: 6rem;
     object-fit:cover;
     object-position: top;
+    transition: all .5s;
     /* border: 1px solid red; */
 }
 
 .hover_index:hover{
-    width: 21rem;
+    /* width: 21rem; */
     color: white;
     background-color: rgba(27, 27, 27, 0.534);
+}
+
+.alto{
+    height: 20rem;
+    transition: all .5s;
+}
+
+.alto:hover{
+    background-color: none;
+}
+
+.disp-none{
+    display: none;
+}
+
+.modulo_on{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: .25rem 0;
+    /* background-color: rgb(228, 228, 228); */
+    /* border: 1px solid green; */
+    border-radius: 1rem;
+    transition: all .5s;
+}
+
+.contenedor_on{
+    display: flex;
+    justify-content:center;
+    align-items: left;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 1rem;
+}
+
+.box_on{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+    /* padding-top: .5rem; */
+    height: 100%;
+    width: 9rem;
+    overflow: hidden;
+
+}
+
+.box_on img{
+    width: 95%;
+    height: 50%;
+    object-fit:contain;
+    object-position: center;
+    /* border: 1px solid red; */
 }
