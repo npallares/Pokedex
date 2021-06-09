@@ -7,7 +7,7 @@ let idPokemon = 0;
 let color=""
 /* export const data_id=0; */
 
-console.log($main)
+/* console.log($main) */
 
 
 

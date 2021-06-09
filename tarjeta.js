@@ -66,7 +66,7 @@ function mostrarPokemon(pokemon){
                     } 
                     
                 }
-                
+
                 // Seteo color de fondo
                 let bgColor=descripcion.color.name
                 $cuadroImagen.classList.add(`bgcolor-${bgColor}`)
@@ -83,3 +83,4 @@ function mostrarPokemon(pokemon){
     /* console.log(pokemon) */
     
 }
+
