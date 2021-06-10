@@ -170,16 +170,18 @@ for (let index = 0; index <= 150; index++) {
 
 /**********BUSCADOR*************/
 
-function serchFilters(input, selector, cardindex){
+function serchFilters(input, cardindex){
 
     document.addEventListener("keyup",(e)=>{
+        
         if(e.target.matches(input)){
         
             document.querySelectorAll(cardindex).forEach((el)=>{
-                if(!el.textContent.toLowerCase().includes(e.target.value)){
-                    el.classList.add("filter") 
+                if(!el.children[0].children[0].children[0].children[0].textContent.toLowerCase().includes(e.target.value)){
+                    el.classList.add("disp-none")
+                    
                     }else {
-                        el.classList.remove("filter")
+                        el.classList.remove("disp-none")
                 }
             })
             
@@ -188,4 +190,4 @@ function serchFilters(input, selector, cardindex){
     })
 }
 
-serchFilters(".card-filter",".titulo_index",".card_index")
+serchFilters(".card-filter",".card_index")
