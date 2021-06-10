@@ -359,6 +359,8 @@ p{
     color:black;
     overflow: hidden;
     height: auto;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.7rem;
     /* border: 1px solid red; */
 }
 
