@@ -1,3 +1,11 @@
+window.addEventListener("load",function(){
+    const $loader = document.getElementById("loader")
+    $loader.classList.add("disp-none")
+})
+
+/* window.onload=function(){
+
+} */
 const $main=document.getElementById("main")
 const $tituloIndex = document.getElementById("titulo_Index")
 const $imgIndex = document.getElementById("img_index")
@@ -22,7 +30,7 @@ const consultarPokemon = (id) =>{
 }
 
 
-for (let index = 0; index <= 6; index++) {
+for (let index = 0; index <= 150; index++) {
     /* s */
     
     let idPokemon = index;
@@ -77,6 +85,16 @@ for (let index = 0; index <= 6; index++) {
                     }
                 }
                 
+                //**************Seteo de "0" para el ID a mostrar*********** */
+
+                let stringDataId = String(data.id)
+
+                if(stringDataId.length == 1){
+                    stringDataId = `00${stringDataId}`
+                }else if(stringDataId.length == 2){
+                    stringDataId = `0${stringDataId}`
+                }
+
                 //*****************************ACA*************** */
                 
                 let card = $fragment.children[0] // card
@@ -89,16 +107,16 @@ for (let index = 0; index <= 6; index++) {
                 let descAtaque=contenedor.children[0].children[2].children[0].children[1]
                 let descDefensa=contenedor.children[0].children[2].children[1].children[1]
                 let descVelocidad=contenedor.children[0].children[2].children[2].children[1]
+                
                 let cont = 0
                 
-                console.log(pokemon.stats[1])
-                console.log(pokemon.stats[2])
-                console.log(pokemon.stats[3])
-                console.log(descAtaque)
-
+                /* console.log($fragment.children[0].children[0].children[0].children[1].children[1]) */
+                
                 selector.addEventListener("click",(e)=>{
                     e.preventDefault()
-                    if(e.target.matches(".button_index")){
+                    console.log(e.target)
+                    if(e.target.matches(".button_index") || e.target.matches(".contenedor_index") || e.target.matches(".img_index")){
+                        
                         if(cont == 0){
                         /* card.setAttribute("class","card_index alto") */
                         contenedor.setAttribute("class",`modulo_on bgcolor-black alto`)
@@ -107,7 +125,10 @@ for (let index = 0; index <= 6; index++) {
                         
                         contenedor_box.setAttribute("class","box_on")
 
-                        numeropokemon.setAttribute("class","")
+                        numeropokemon.setAttribute("class","idPokemonIndex")
+                        numeropokemon.innerHTML="# "+stringDataId
+                        
+                        console.log(numeropokemon)
 
                         habilidades.setAttribute("class","habilidades")
 
@@ -146,3 +167,25 @@ for (let index = 0; index <= 6; index++) {
         /* a */
     }
 }
+
+/**********BUSCADOR*************/
+
+function serchFilters(input, selector, cardindex){
+
+    document.addEventListener("keyup",(e)=>{
+        if(e.target.matches(input)){
+        
+            document.querySelectorAll(cardindex).forEach((el)=>{
+                if(!el.textContent.toLowerCase().includes(e.target.value)){
+                    el.classList.add("filter") 
+                    }else {
+                        el.classList.remove("filter")
+                }
+            })
+            
+            if(e.key == "Escape") e.target.value="";
+        }
+    })
+}
+
+serchFilters(".card-filter",".titulo_index",".card_index")

@@ -6,6 +6,10 @@ html{
 }
 
 body{
+    /* background-image: url(./assets/fondo.jpg);
+    background-size:cover;
+    background-repeat: no-repeat; */
+    background-color: rgb(245, 237, 125);
     display: flex;
     margin: 0;
     overflow-x: hidden;
@@ -16,6 +20,27 @@ body{
     align-items: center;
     font-family: 'Titillium Web', sans-serif;
     height: 100vh;
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+}
+
+.loader img{
+    margin-top: 7px;
+    margin-right: 15px;
+    height: 30px;
+    /* width: 15px; */
 }
 
 main{
@@ -29,8 +54,11 @@ main{
 }
 
 header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 25rem;
-    height: 4rem;
+    height: 5rem;
     background-color: rgba(49,49,49);
     border-radius: 2rem 2rem 0 0;
 }
@@ -48,10 +76,26 @@ a{
  */
 
 footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 25rem;
-    height: 2rem;
+    height: 3rem;
     background-color: rgba(40,40,40);
     border-radius: 0 0 2rem 2rem ;
+    color: rgb(121, 121, 121);
+    font-size: .8rem;
+}
+
+footer p{
+    margin-top: -.1rem;
+    color: rgb(202, 202, 202);
+}
+footer img{
+    width: 15px;
+    margin-right: 5px;
+    margin-top: -.1rem;
+    color: rgb(202, 202, 202);
 }
 /* footer{
     width: 25rem;
@@ -74,6 +118,26 @@ h2{
 p{
     padding:0;
     margin:0;
+}
+
+.pokedex img{
+    margin-top: 7px;
+    margin-right: 15px;
+    height: 30px;
+    /* width: 15px; */
+}
+
+.card-filter{
+    width: 150px;
+    height: 25px;
+    border: 0;
+    border-color: none;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1rem;
+    border-radius: 5px;
 }
 
 .card{
@@ -332,6 +396,7 @@ p{
     /* width: 21rem; */
     color: white;
     background-color: rgba(27, 27, 27, 0.534);
+    /* transition: all .1s; */
 }
 
 .alto{
@@ -374,6 +439,7 @@ p{
     height: 100%;
     width: 9rem;
     overflow: hidden;
+    margin-top: -1rem;
 
 }
 
@@ -437,7 +503,27 @@ p{
     /* border: 1px solid blue; */
 }
 
+
+.idPokemonIndex{
+    text-align: right;
+    padding-right: 1rem;
+    padding-top: 2.1rem;
+    color: rgb(80, 80, 80);
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    transition: all 1s;
+    /* border: 1px solid blue; */
+}
+
 .disp-none{
     display: none;
     transition: all 1s;
+}
+
+.filter{
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
 }
