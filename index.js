@@ -22,7 +22,7 @@ const consultarPokemon = (id) =>{
 }
 
 
-for (let index = 0; index <= 35; index++) {
+for (let index = 0; index <= 6; index++) {
     /* s */
     
     let idPokemon = index;
@@ -62,9 +62,9 @@ for (let index = 0; index <= 35; index++) {
                 h1Frag.innerHTML=nombre
                 
                 //Seteo de imagen                
-                let imgFrag=$fragment.children[0].querySelector("img")
+                let imgFrag=$fragment.children[0].children[0].children[0].children[1].children[0]
                 imgFrag.setAttribute("src",pokemon.sprites.other.dream_world.front_default)
-
+                
                 
                 //Seteo de descripcion para buscar la info en español             
                 let descripcion = $fragment.children[0].querySelector("p")
@@ -85,16 +85,23 @@ for (let index = 0; index <= 35; index++) {
                 let selector = $fragment.children[0].children[0]
                 let descrpcion = contenedor.children[0].children[1]
                 let numeropokemon = contenedor.children[1].children[1]
+                let habilidades = contenedor.children[0].children[2]
+                let descAtaque=contenedor.children[0].children[2].children[0].children[1]
+                let descDefensa=contenedor.children[0].children[2].children[1].children[1]
+                let descVelocidad=contenedor.children[0].children[2].children[2].children[1]
                 let cont = 0
-
-                console.log(descrpcion)
+                
+                console.log(pokemon.stats[1])
+                console.log(pokemon.stats[2])
+                console.log(pokemon.stats[3])
+                console.log(descAtaque)
 
                 selector.addEventListener("click",(e)=>{
                     e.preventDefault()
                     if(e.target.matches(".button_index")){
                         if(cont == 0){
                         /* card.setAttribute("class","card_index alto") */
-                        contenedor.setAttribute("class",`modulo_on  bgcolor-${color} alto`)
+                        contenedor.setAttribute("class",`modulo_on bgcolor-black alto`)
 
                         descrpcion.setAttribute("class","descripcion")
                         
@@ -102,8 +109,15 @@ for (let index = 0; index <= 35; index++) {
 
                         numeropokemon.setAttribute("class","")
 
-                        console.log(contenedor.children[1].children[1])
-                        console.log(contenedor_box)
+                        habilidades.setAttribute("class","habilidades")
+
+                        descAtaque.innerHTML="Poder " + pokemon.stats[1].base_stat 
+                        
+                        descDefensa.innerHTML="Defensa " + pokemon.stats[2].base_stat
+                        
+                        descVelocidad.innerHTML="Defensa " + pokemon.stats[3].base_stat
+
+
                         cont=1
 
                         } else{
@@ -111,6 +125,8 @@ for (let index = 0; index <= 35; index++) {
                             descrpcion.setAttribute("class","disp-none")
                             contenedor_box.setAttribute("class","box")
                             numeropokemon.setAttribute("class","disp-none")
+                            habilidades.setAttribute("class","habilidades disp-none")
+                            
                             cont=0
                         }
                     } else {
