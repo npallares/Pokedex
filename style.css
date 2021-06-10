@@ -352,6 +352,8 @@ p{
 }
 
 .titulo_index{
+    z-index: 999;
+    width: auto;
     margin-top: -10px;
     font-size: 1.8rem;
     color:black;
@@ -368,6 +370,7 @@ p{
     height: 1.7rem;
     font-size: 1rem;
     text-align:center;
+    font-family: 'Titillium Web', sans-serif;
    /*  border: 1px solid blue; */
     color: white;
     border-radius: .6rem;
