@@ -132,11 +132,11 @@ for (let index = 0; index <= 150; index++) {
 
                         habilidades.setAttribute("class","habilidades")
 
-                        descAtaque.innerHTML="Poder " + pokemon.stats[1].base_stat 
+                        descAtaque.innerHTML="Ataque " + pokemon.stats[1].base_stat 
                         
                         descDefensa.innerHTML="Defensa " + pokemon.stats[2].base_stat
                         
-                        descVelocidad.innerHTML="Defensa " + pokemon.stats[3].base_stat
+                        descVelocidad.innerHTML="Velocidad " + pokemon.stats[3].base_stat
 
 
                         cont=1

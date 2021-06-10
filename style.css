@@ -362,19 +362,18 @@ p{
     /* border: 1px solid red; */
 }
 
-.button_index{
-    justify-content: flex;
-    align-items: center;
-    justify-content: center;
+.button_index{  
     width: 9rem;
     height: 1.7rem;
+    line-height: 1.7rem;
     font-size: 1rem;
+    font-display: center;
     text-align:center;
     font-family: 'Titillium Web', sans-serif;
-   /*  border: 1px solid blue; */
     color: white;
     border-radius: .6rem;
     background-color: rgb(39, 39, 39);
+    /*  border: 1px solid blue; */
 }
 
 .box{
