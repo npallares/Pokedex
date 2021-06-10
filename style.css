@@ -81,6 +81,7 @@ p{
     flex-direction: column;
     height: auto;
     width: 25rem;
+    transition: all .5s;
     /* border:1px solid red; */
 }
 .card_index{
@@ -150,6 +151,7 @@ p{
     justify-content: center;
     align-items: center;
     height: 20rem;
+    transition: all .5s;
     /* border:1px solid green; */
 }
 
@@ -159,6 +161,7 @@ p{
     width: 15rem;
     padding:2rem;
     /* border: solid 1px red; */
+    transition: all .5s;
 }
 
 .circle{
@@ -250,6 +253,7 @@ p{
     height: auto;
     justify-content: center;
     align-items: center;
+    transition: all .5s;
 }
 
 .iconCar{
@@ -261,7 +265,7 @@ p{
 .modulo_index{
     display: flex;
     justify-content: space-between;
-    height: 6rem;
+    height: 7rem;
     margin: .25rem 0;
     /* background-color: rgb(228, 228, 228); */
     /* border: 1px solid green; */
@@ -276,6 +280,7 @@ p{
     flex-direction: column;
     width: 55%;
     margin-left: 1rem;
+    transition: all .5s;
     /* border:solid 1px green; */
 }
 
@@ -283,7 +288,7 @@ p{
     margin-top: -10px;
     font-size: 1.8rem;
     color:black;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     overflow: hidden;
     height: auto;
 }
@@ -305,7 +310,7 @@ p{
 .box{
     /* border: 1px solid green; */
     /* padding-top: .5rem; */
-    height: 10rem;
+    height: 7rem;
     width: 9rem;
     overflow: hidden;
     transition: all .5s;
@@ -313,7 +318,7 @@ p{
 
 .box img{
     width: 95%;
-    height: 6rem;
+    height: 7rem;
     object-fit:cover;
     object-position: top;
     transition: all .5s;
@@ -377,4 +382,20 @@ p{
     object-fit:contain;
     object-position: center;
     /* border: 1px solid red; */
+}
+
+.img_index{
+    transition: all .5s;
+}
+
+.descripcion{
+    height: auto;
+    width: 11rem;
+    margin: 1rem 0;
+    color: black;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    transition: all .5s;
+    border: 1px solid blue;
 }

@@ -22,11 +22,11 @@ const consultarPokemon = (id) =>{
 }
 
 
-for (let index = 0; index <= 3; index++) {
+for (let index = 0; index <= 35; index++) {
+    /* s */
     
     let idPokemon = index;
     consultarPokemon(idPokemon)
-    
     function mostrarPokemon(pokemon){
         
         let link=pokemon.species.url
@@ -56,7 +56,7 @@ for (let index = 0; index <= 3; index++) {
                 // Deteccion y seteo de boton para agregado del DataId 
                 $fragment.children[0].children[0].children[0].children[0].children[1].setAttribute("id",data.id)
                 
-                //Seteo de nombre para titulo
+                //Seteo de nombre para Nombre o titulo
                 let h1Frag=$fragment.children[0].querySelector("h1")
                 let nombre=pokemon.name.toUpperCase();                
                 h1Frag.innerHTML=nombre
@@ -65,9 +65,20 @@ for (let index = 0; index <= 3; index++) {
                 let imgFrag=$fragment.children[0].querySelector("img")
                 imgFrag.setAttribute("src",pokemon.sprites.other.dream_world.front_default)
 
+                
+                //Seteo de descripcion para buscar la info en español             
+                let descripcion = $fragment.children[0].querySelector("p")
+                
+                for (let index = 0; index < 200 ; index++) {      
+                    
+                    if(data.flavor_text_entries[index].language.name == "es"){
+                        descripcion.innerHTML = data.flavor_text_entries[index].flavor_text
+                        index = 200
+                    }
+                }
+                
                 //*****************************ACA*************** */
                 
-                //Seteo funcion para ver data
                 let card = $fragment.children[0] // card
                 let contenedor = card.children[0].children[0] // Contenedor
                 let contenedor_box = contenedor.children[1]
@@ -75,6 +86,9 @@ for (let index = 0; index <= 3; index++) {
                 let descrpcion = contenedor.children[0].children[1]
                 let numeropokemon = contenedor.children[1].children[1]
                 let cont = 0
+
+                console.log(descrpcion)
+
                 selector.addEventListener("click",(e)=>{
                     e.preventDefault()
                     if(e.target.matches(".button_index")){
@@ -82,7 +96,7 @@ for (let index = 0; index <= 3; index++) {
                         /* card.setAttribute("class","card_index alto") */
                         contenedor.setAttribute("class",`modulo_on  bgcolor-${color} alto`)
 
-                        descrpcion.setAttribute("class","")
+                        descrpcion.setAttribute("class","descripcion")
                         
                         contenedor_box.setAttribute("class","box_on")
 
