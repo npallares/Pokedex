@@ -9,7 +9,8 @@ body{
     /* background-image: url(./assets/fondo.jpg);
     background-size:cover;
     background-repeat: no-repeat; */
-    background-color: rgb(245, 237, 125);
+    background: rgb(34,114,195);
+    background: linear-gradient(0deg, rgba(34,114,195,1) 0%, rgba(85,78,207,1) 100%);
     display: flex;
     margin: 0;
     overflow-x: hidden;
@@ -51,9 +52,13 @@ main{
     height: 40rem;
     overflow-y: scroll;
     background-color: #dadada;
+    -webkit-box-shadow:0 0 5px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 5px rgba(0,0,0,0.8);
+    box-shadow:0 0 5px rgba(0,0,0,0.8);
 }
 
 header{
+    z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,6 +67,9 @@ header{
     background-color: rgba(49,49,49);
     border-radius: 2rem 2rem 0 0;
     margin-top: 1rem;
+    -webkit-box-shadow:0 0 5px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 5px rgba(0,0,0,0.8);
+    box-shadow:0 0 5px rgba(0,0,0,0.8);
 }
 
 a{
@@ -77,6 +85,7 @@ a{
  */
 
 footer{
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,6 +96,9 @@ footer{
     color: rgb(121, 121, 121);
     font-size: .8rem;
     margin-bottom: 1rem;
+    -webkit-box-shadow:0 0 5px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 5px rgba(0,0,0,0.8);
+    box-shadow:0 0 5px rgba(0,0,0,0.8);
 }
 
 footer p{
