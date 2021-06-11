@@ -147,7 +147,7 @@ p{
     flex-direction: column;
     height: auto;
     width: 25rem;
-    transition: all .5s;
+    /* transition: all .5s; */
     /* border:1px solid red; */
 }
 .card_index{
@@ -220,7 +220,7 @@ p{
     justify-content: center;
     align-items: center;
     height: 20rem;
-    transition: all .5s;
+    /* transition: all .5s; */
     /* border:1px solid green; */
 }
 
@@ -230,7 +230,7 @@ p{
     width: 15rem;
     padding:2rem;
     /* border: solid 1px red; */
-    transition: all .5s;
+    /* transition: all .5s; */
 }
 
 .circle{
@@ -322,7 +322,7 @@ p{
     height: auto;
     justify-content: center;
     align-items: center;
-    transition: all .5s;
+    /* transition: all .5s; */
 }
 
 .iconCar{
@@ -339,7 +339,7 @@ p{
     /* background-color: rgb(228, 228, 228); */
     /* border: 1px solid green; */
     border-radius: 1rem;
-    transition: all .5s;
+    /* transition: all .5s; */
 }
 
 .contenedor_index{
@@ -349,7 +349,7 @@ p{
     flex-direction: column;
     width: 55%;
     margin-left: 1rem;
-    transition: all .5s;
+    /* transition: all .5s; */
     /* border:solid 1px green; */
 }
 
@@ -387,7 +387,7 @@ p{
     height: 7rem;
     width: 9rem;
     overflow: hidden;
-    transition: all .5s;
+    /* transition: all .5s; */
 }
 
 .box img{
@@ -395,7 +395,7 @@ p{
     height: 7rem;
     object-fit:cover;
     object-position: top;
-    transition: all .5s;
+    /* transition: all .5s; */
     /* border: 1px solid red; */
 }
 
@@ -408,7 +408,7 @@ p{
 
 .alto{
     height: 20rem;
-    transition: all .5s;
+    /* transition: all .5s; */
 }
 
 .alto:hover{
@@ -459,7 +459,7 @@ p{
 }
 
 .img_index{
-    transition: all 1s;
+    transition: all .2s;
 }
 
 .descripcion{
@@ -489,7 +489,7 @@ p{
     height: 25px;
     /* padding: 5px 0; */
     margin: 0;
-    transition: all .5s;
+    /* transition: all .5s; */
     /* border: 1px solid red; */
 }
 

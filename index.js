@@ -114,7 +114,7 @@ for (let index = 0; index <= 150; index++) {
                 
                 selector.addEventListener("click",(e)=>{
                     e.preventDefault()
-                    console.log(e.target)
+                    /* console.log(e.target) */
                     if(e.target.matches(".button_index") || e.target.matches(".contenedor_index") || e.target.matches(".img_index")){
                         
                         if(cont == 0){
@@ -128,7 +128,7 @@ for (let index = 0; index <= 150; index++) {
                         numeropokemon.setAttribute("class","idPokemonIndex")
                         numeropokemon.innerHTML="# "+stringDataId
                         
-                        console.log(numeropokemon)
+                        /* console.log(numeropokemon) */
 
                         habilidades.setAttribute("class","habilidades")
 
