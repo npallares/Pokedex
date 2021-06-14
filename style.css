@@ -24,6 +24,7 @@ body{
 }
 
 .loader{
+    z-index: 999999;
     display: flex;
     justify-content: center;
     align-items: center;
